@@ -14,7 +14,7 @@ menu: posts
 
 Google BigQuery の `GEOGRAPHY` データ型はそのままでは Google DataStudio では使えないので(取り込み対象カラムとして表示されない)以下のように変換しておく必要がある。
 
-```sql
+``` sql
 SELECT
     CONCAT(CAST(ST_Y(p) AS STRING), ",", CAST(ST_X(p) AS STRING)) AS lat_lng
 FROM
@@ -49,7 +49,7 @@ Google BigQuery の地理情報をデータポータルで可視化する仕事�
 
 カスタムクエリに以下のようなクエリをセットして
 
-```sql
+``` sql
 -- カスタムクエリに記載するクエリ
 SELECT
     -- その他のカラム
