@@ -1,0 +1,5 @@
+# ignore IDE settings
+*.code-workspace
+
+# ignore static generated files
+public
