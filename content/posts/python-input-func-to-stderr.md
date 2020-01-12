@@ -8,8 +8,6 @@ categories: [ blog ]
 summary: "Python の input 関数の出力を標準エラー出力に向ける"
 authors: noissefnoc
 menu: posts
-plugins: [highlight]
-highlightTheme: monokai
 ---
 
 もう少しマシな方法があるかもしれないけれど、一旦できたので記録。
