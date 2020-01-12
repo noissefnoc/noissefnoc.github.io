@@ -16,7 +16,7 @@ Python で CLI を作っていて、Username/Password を対話的に入力し�
 
 例示すると以下
 
-```console
+``` console
 # そのまま実行すると以下
 $ python cli.py
 Username:             # ユーザ名を対話的に入力
@@ -38,7 +38,7 @@ Passowrd のように echo back させない対話入力は `getpass` モジュ�
 
 `getpass` 関数には `stream` 引数にプロンプトの出力先を変更できる。
 
-```python
+``` python
 from getpass import getpass
 import sys
 
@@ -61,7 +61,7 @@ Python のレイヤーで言うと `getpass.getpass` と同じようにオプシ
 
 暫定的な対応をすると `getpass` 関数と合わせて以下のような処理を書いた。
 
-```python
+``` python
 import sys
 from typing import IO
 
