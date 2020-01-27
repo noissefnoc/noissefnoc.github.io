@@ -35,3 +35,40 @@ $ brew install tfenv
 * `min-required` ：`.tf` を見て必要な最小のバージョン
 
 という記述も使える。
+
+### terraform のバージョン固定
+
+`*env` の設定にあるようにフォルダに設定ファイルを用意することでバージョンの指定ができる。
+
+ファイル名は `.terraform-version`
+
+``` console
+$ echo 0.12.0 > .terraform-version
+```
+
+## terraform 0.12.x のインストール
+
+特に以前のバージョンはないので最新のバージョンを入れる
+
+``` console
+$ tfenv install latest
+```
+
+インストールされたバージョンで固定する。
+
+
+### tfenv 向け
+
+``` console
+$ echo 0.12.20 > .terraform-version
+```
+
+### .tf ファイル向け
+
+``` main.tf
+terraform {
+    required_version = "<=0.12.20"
+}
+```
+
+以上。
