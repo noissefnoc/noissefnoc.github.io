@@ -19,3 +19,7 @@ menu: posts
 
 * DSL とはいえ、言語を書くので Linter が欲しかった
 * `terraform plan` で問題なさそうになっていても `terraform apply` で失敗するの辛いので事前に知りたい
+
+## メモ
+
+* `--deep` オプションの詳細を調べる
