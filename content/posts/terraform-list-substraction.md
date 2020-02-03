@@ -72,7 +72,6 @@ distinct(concat(base_list, additional_list))
 
 ``` terraform
 locals {
-    base_list   = module.aws_config.base_list
     add_list    = distinct(concat(module.aws_config.base_list, var.additional_list))
     target_list = [for r in add_list: r if !contains(var.substraction_list, r)]
 }
