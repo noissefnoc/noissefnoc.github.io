@@ -17,7 +17,7 @@ terraform の `tostring` 関数がプリミティブ型(`string` / `number` / `b
 > Only the primitive types (string, number, and bool) can be converted to string. All other values will produce an error.
 [tostring Function](https://www.terraform.io/docs/configuration/functions/tostring.html)
 
-しかし、AWS のセットアップにおいて `list` を `string` にしてヒアドキュメントに埋め込みたいというユースケースがあり (「`data` を使え」というのがおそらく terraform 的には正しいのだと思うけれど、やり方が悪いのか `terraform plan` さいの差分範囲が広く見えてしまうので今は直接書いている)、 terraform で `tostring` がどう実装されているのかを調べてみたかったため。
+しかし、AWS のセットアップにおいて `list` を `string` にしてヒアドキュメントに埋め込みたいというユースケースがあり (「`data` を使え」というのがおそらく terraform 的には正しいのだと思うけれど、やり方が悪いのか `terraform plan` のさいの差分範囲が広く見えてしまうので今は直接書いている)、 terraform で `tostring` がどう実装されているのかを調べてみたかったため。
 
 
 ## tl;dr
