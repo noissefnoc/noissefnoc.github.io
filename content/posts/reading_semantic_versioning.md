@@ -22,6 +22,7 @@ menu: posts
 * API開発においては `.proto` のバージョンと、APIアプリのバージョン両方を加味したバージョンをどうつけるべきかと思いました
 
 
+
 ## 参考
 
 * [Semantic Versioning 2.0.0](https://semver.org/)：原文(英語)
