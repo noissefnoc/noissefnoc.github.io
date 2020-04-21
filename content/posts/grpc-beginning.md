@@ -24,7 +24,7 @@ menu: posts
     * [protocolbuffers/protobuf-go: Go support for Google's protocol buffers](https://github.com/protocolbuffers/protobuf-go) ※将来的に移行する方で、新API対応。 `go get` するときのパスは `google.golang.org/protobuf` 。 **`protoc-gen-go` で gRPC のコード生成をサポートしなくなった**
         * 新APIの話は例えば [A new Go API for Protocol Buffers - The Go Blog](https://blog.golang.org/protobuf-apiv2)
         * 将来的に [grpc/grpc-go: The Go language implementation of gRPC. HTTP/2 based RPC](https://github.com/grpc/grpc-go) で生成を求められている
-        * `grpc/grpc-go` 側では [google.golang.org/grpc: move protoc-gen-go-grpc into grpc module · Issue #903 · golang/protobuf](https://github.com/golang/protobuf/issues/903)がメインの issue で PR として [cmd/protoc-gen-go-grpc: add code generator by neild · Pull Request #3453 · grpc/grpc-go](https://github.com/grpc/grpc-go/pull/3453) が上がっているが、現在進行が止まっている
+        * `grpc/grpc-go` 側では [google.golang.org/grpc: move protoc-gen-go-grpc into grpc module · Issue #903 · golang/protobuf](https://github.com/golang/protobuf/issues/903)がメインの issue で PR として [cmd/protoc-gen-go-grpc: add code generator by neild · Pull Request #3453 · grpc/grpc-go](https://github.com/grpc/grpc-go/pull/3453) が上がっているが、現在進行が止まっている (4月末もまだ)
 * gPRC Go
     * [grpc/grpc-go: The Go language implementation of gRPC. HTTP/2 based RPC](https://github.com/grpc/grpc-go) ※ 近いうちに `protoc-gen-grpc` の提供が必要だが、まだ未対応
         * `Documentation` ディレクトリに FAQ の回答みたいなドキュメントが置いてある
@@ -45,3 +45,4 @@ menu: posts
         * [go - Testing a gRPC service - Stack Overflow](https://stackoverflow.com/questions/42102496/testing-a-grpc-service) 古いけどテストの方法まとまってる
         * (protoファイルからいい感じのAPI仕様書を作りたい - Qiita)[https://qiita.com/ayatothos/items/ea05a70856d8812c644e]
             * [pseudomuto/protoc-gen-doc: Documentation generator plugin for Google Protocol Buffers](https://github.com/pseudomuto/protoc-gen-doc) の紹介とカスタムテンプレート
+    * Reflection を使おうと思ったら今のところ Google 公式のより [jhump/protoreflect: Reflection (Rich Descriptors) for Go Protocol Buffers](https://github.com/jhump/protoreflect) を使った方がよさそう。Google の [API Improvement Proposals](https://aip.dev/) の linter ([googleapis/api-linter: A linter for APIs defined in protocol buffers.](https://github.com/googleapis/api-linter) も使ってない上にメンテナのGooglerが[Extracting custom option info from Protobuf message · Issue #794 · golang/protobuf](https://github.com/golang/protobuf/issues/794#issuecomment-519353512) で機能不十分や同じようなパッケージ何個も使わないといけないことに対して「えー」って言ってる
