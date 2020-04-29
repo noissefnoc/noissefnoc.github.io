@@ -46,3 +46,5 @@ menu: posts
         * (protoファイルからいい感じのAPI仕様書を作りたい - Qiita)[https://qiita.com/ayatothos/items/ea05a70856d8812c644e]
             * [pseudomuto/protoc-gen-doc: Documentation generator plugin for Google Protocol Buffers](https://github.com/pseudomuto/protoc-gen-doc) の紹介とカスタムテンプレート
     * Reflection を使おうと思ったら今のところ Google 公式のより [jhump/protoreflect: Reflection (Rich Descriptors) for Go Protocol Buffers](https://github.com/jhump/protoreflect) を使った方がよさそう。Google の [API Improvement Proposals](https://aip.dev/) の linter ([googleapis/api-linter: A linter for APIs defined in protocol buffers.](https://github.com/googleapis/api-linter) も使ってない上にメンテナのGooglerが[Extracting custom option info from Protobuf message · Issue #794 · golang/protobuf](https://github.com/golang/protobuf/issues/794#issuecomment-519353512) で機能不十分や同じようなパッケージ何個も使わないといけないことに対して「えー」って言ってる
+    * Linter
+        * [bufbuild/buf: A new way of working with Protocol Buffers.](https://github.com/bufbuild/buf) が有力らしい
