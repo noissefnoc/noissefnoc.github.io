@@ -13,3 +13,9 @@ menu: posts
 ## tl;dr
 
 ただの調べたことメモなので、サマリはありません。
+
+## 参考
+
+* AWS CLI リファレンス
+    * [dynamodb — AWS CLI 1.18.51 Command Reference](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html): v1のリファレンス
+    * [dynamodb — AWS CLI 2.0.10 Command Reference](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/dynamodb/index.html): v2のリファレンス
