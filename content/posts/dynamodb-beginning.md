@@ -14,6 +14,46 @@ menu: posts
 
 ただの調べたことメモなので、サマリはありません。
 
+## AWS CLI
+
+### v1
+
+* 検証 `aws-cli` バージョン：`1.8.0`
+* 検証環境：dockerのdynamodb公式イメージ
+    * エンドポイントはディフォルトの `http://localhost:8000` とする
+
+
+#### テーブル定義をJSONファイルで投入
+
+項目定義にPartition/Sort/Indexに使わないキーを含めているとエラーになるので注意。パフォーマンス設定値はどの値が適切なのかよく分かっていない。
+
+```console
+$ aws dynamodb --endpoint-url http://localhost:8000 --cli-input-json file://PATH/TO/JSON/table_name.json
+```
+
+#### テーブル定義のdump
+
+```console
+$ aws dynamodb describe-table --endpoint-url http://localhost:8000 --table-name TABLE_NAME > ./table_name.json
+```
+
+ただし、自分では定義しないはずのフィールドも含まれるので、その点は注意。
+
+#### テーブル削除
+
+```console
+$ aws dynamodb delete-table --endpoint-url http://localhost:8000 --table-name TABLE_NAME
+```
+
+#### データ投入
+
+文字列以外も全てAttribute上は文字列で作成することに注意
+
+```console
+$ aws dynamodb batch-write-item --endpoint-url http://localhost:8000 --request-items file://PATH/TO/JSON/table_name.json
+```
+
+
 ## 参考
 
 * AWS CLI
