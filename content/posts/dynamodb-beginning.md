@@ -28,7 +28,7 @@ menu: posts
 項目定義にPartition/Sort/Indexに使わないキーを含めているとエラーになるので注意。パフォーマンス設定値はどの値が適切なのかよく分かっていない。
 
 ```console
-$ aws dynamodb --endpoint-url http://localhost:8000 --cli-input-json file://PATH/TO/JSON/table_name.json
+$ aws dynamodb create-table --endpoint-url http://localhost:8000 --cli-input-json file://PATH/TO/JSON/table_name.json
 ```
 
 #### テーブル定義のdump
